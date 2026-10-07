@@ -26,7 +26,7 @@ class RegisterAPIView(CreateAPIView):
 
 
 
-class VerifyEmailView(MOdelV):
+class VerifyEmailView(GenericAPIView):
     serializer_class = VerifyEmailSerializer
     permission_classes = [AllowAny]
 

@@ -14,7 +14,6 @@ from app.serializers import ProductSerializer
 class ProductListCreateAPIView(ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    pagination_class =
     permission_classes = [IsAuthenticatedOrReadOnly]
 
     @swagger_auto_schema(
