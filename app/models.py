@@ -48,6 +48,7 @@ class EmailCode(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     code = models.CharField(max_length=6)
     attempts = models.PositiveSmallIntegerField(default=0)
+    is_confirmed = models.BooleanField(default=False)     # kod to'g'ri kiritildimi
     created_at = models.DateTimeField(auto_now_add=True)
 
     def is_expired(self):

@@ -9,7 +9,7 @@ from rest_framework.generics import (
 from rest_framework.permissions import IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly
 
 from app.models import Product
-from app.serializers import ProductSerializer
+from app.serializers.user import ProductSerializer
 
 class ProductListCreateAPIView(ListCreateAPIView):
     queryset = Product.objects.all()
